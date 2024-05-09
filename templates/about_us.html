@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> about_us | codecraft.com</title>
+
+    <link rel="shortcut icon" href="/static/assets/images/fav.jpg">
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" href="/static/assets/plugins/slider/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/assets/plugins/slider/css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- ################# Header Starts Here#######################--->
+    {%  include "header.html" %}
+
+
+
+    <!--  ************************* Page Title Starts Here ************************** -->
+    <div class="page-nav no-margin row">
+        <div class="container">
+            <div class="row">
+                <h2>About TechRel Institute</h2>
+                <ul>
+                    <li> <a href="/"><i class="fas fa-home"></i> Home</a></li>
+                    <li><i class="fas fa-angle-double-right"></i> About Us</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ######## Page  Title End ####### -->
+
+    <section class="with-medical">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <img src="/static/assets/images/why.jpg" alt="">
+                </div>
+                <div class="col-lg-6 col-md-12 txtr">
+                    <h4>Why choose  <br>
+                        <span>TechRel Institute?</span>
+                    </h4>
+                    <p>Here are ten solid reasons that make us the best IT training institute in Pune, and why you must choose us for a promising career-start.</p>
+                    <p>1. Gain access to a wide range of programming courses, software testing courses, and others, including Java Course, UI UX, AWS, DevOps, etc. </p>
+                    <p>2. Get live exposure to the latest technologies.</p>
+                    <p>3. Get exposure to challenging real-world projects</p>
+                    <p>4. Interact and learn with industry experts.</p>
+                    <p>5. Avail 24/7 lab facility that offers continual learning and training support. </p>
+                    <p>6. Competitive course fees to help every aspiring professional enroll for the course.</p>
+                    <p>7. Get 100% placement assistance</p>
+                    <p>8. Learn through certified, experienced and expert technology trainers, working with reputed IT companies, and with a minimum 5-year experience in IT.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+   
+     <!-- ################# University Number Starts Here#######################--->
+
+
+     <div class="doctor-message">
+        <div class="inner-lay">
+            <div class="container">
+               <div class="row session-title">
+                   <h2>TechRel Institute Ideologies & Approach</h2>
+                   <p>At CodeCraft, we believe in democratizing technical education by providing quality content, 
+                    hands-on learning, community support, continuous improvement, and empowerment. Our approach aims
+                     to inspire and equip learners with the skills and confidence to succeed in the dynamic field of programming.</p>
+               </div>
+        
+                <div class="row">
+                    <div class="col-sm-3 numb">
+                        <h3>12+</h3>
+                        <span>TUTORIALS</span>
+                    </div>
+                    <div class="col-sm-3 numb">
+                        <h3>10+</h3>
+                        <span>COURSES</span>
+                    </div>
+                    <div class="col-sm-3 numb">
+                        <h3>12+</h3>
+                        <span>SOLVED PROBLEMS</span>
+                    </div>
+                    <div class="col-sm-3 numb">
+                        <h3>18+</h3>
+                        <span>INTERVIEW PREPRATION QUESTIONS</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>     
+         
+    <!-- ################# Our Instructors Starts Here#######################--->    
+
+<div class="our-instructor">
+    <div class="container">
+        <div class="session-title row">
+            <h2>Our Team</h2>
+        </div>
+        <div class="instruct-row row">
+            {% for trainersD in trainers %}
+            <div class="col-md-3">
+                <div class="instruct-card">
+                    <img src="{{ trainersD.T_image.url }}" alt="{{ trainersD.T_name }}">
+                    <h6>{{ trainersD.T_name }}</h6>
+                    <p>{{ trainersD.T_description }}</p>
+                    <!-- Social media links or any other additional information can be added here -->
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+    <!-- ################# Our Footer Starts Here#######################--->
+
+
+    {%  include "footer.html" %}    
+    <div class="copy">
+        <div class="container">
+            <a href="https://onezeroeight.in/">2024 &copy; All Rights Reserved | Designed and Developed by OneZeroEight Ltd.</a>
+
+            <span>
+                <a><i class="fab fa-github"></i></a>
+                <a><i class="fab fa-google-plus-g"></i></a>
+                <a><i class="fab fa-pinterest-p"></i></a>
+                <a><i class="fab fa-twitter"></i></a>
+                <a><i class="fab fa-facebook-f"></i></a>
+            </span>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+
+<script src="/static/assets/js/jquery-3.2.1.min.js"></script>
+<script src="/static/assets/js/popper.min.js"></script>
+<script src="/static/assets/js/bootstrap.min.js"></script>
+<script src="/static/assets/plugins/slider/js/owl.carousel.min.js"></script>
+<script src="/static/assets/js/script.js"></script>
+
+
+</html>

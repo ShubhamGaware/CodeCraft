@@ -1,0 +1,3 @@
+codecraft main project admin credential
+user Id: dev_admin
+pass: dev@123

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Cources | codecraft.com</title>
+
+    <link rel="shortcut icon" href="/static/assets/images/fav.jpg">
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" href="/static/assets/plugins/slider/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/assets/plugins/slider/css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- ################# Header Starts Here#######################--->
+    {%  include "header.html" %}
+
+
+    <!--  ************************* Page Title Starts Here ************************** -->
+    <div class="page-nav no-margin row">
+        <div class="container">
+            <div class="row">
+                <h2>Cources</h2>
+                <ul>
+                    <li> <a href="/"><i class="fas fa-home"></i> Home</a></li>
+                    <li><i class="fas fa-angle-double-right"></i> Cources</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ######## Page  Title End ####### -->
+
+    
+
+<!-- ################# popular Cources Starts Here#######################--->
+<div class="popular-cources pc2">
+    <div class="container">
+        <div class="row courc-ro">
+            {% for CD in courseData %}
+            <div class="col-md-4">
+                <div class="courc-card">
+                    <img src="/media/{{ CD.course_icon }}" alt="">
+                    <div class="cource-det">
+                        <h6>{{ CD.course_name }}</h6>
+                        <ul>
+                            <li><i class="fas fa-graduation-cap"></i> {{ CD.professor_name }}</li>
+                            <li><i class="far fa-calendar-check"></i>Current Batch: {{ CD.current_batch_date }}</li>
+                            <li><i class="far fa-clock"></i> Batch Timing: {{ CD.batch_timing }}</li>
+                            <li><i class="far fa-calendar-alt"></i> Upcoming Batch:  {{ CD.upcoming_batch }}</li>
+                            <li><i class="fas fa-rupee-sign"></i>Fees: ₹{{ CD.fees}}</li> 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+         </div>
+    </div>
+</div>  
+
+    <!-- ################# Our Footer Starts Here#######################--->
+
+
+    {%  include "footer.html" %}
+
+    <div class="copy">
+        <div class="container">
+            <a href="https://onezeroeight.in/">2024 &copy; All Rights Reserved | Designed and Developed by OneZeroEight Ltd.</a>
+
+            <span>
+                <a><i class="fab fa-github"></i></a>
+                <a><i class="fab fa-google-plus-g"></i></a>
+                <a><i class="fab fa-pinterest-p"></i></a>
+                <a><i class="fab fa-twitter"></i></a>
+                <a><i class="fab fa-facebook-f"></i></a>
+            </span>
+        </div>
+
+    </div>
+
+</body>
+
+<script src="/static/assets/js/jquery-3.2.1.min.js"></script>
+<script src="/static/assets/js/popper.min.js"></script>
+<script src="/static/assets/js/bootstrap.min.js"></script>
+<script src="/static/assets/plugins/slider/js/owl.carousel.min.js"></script>
+<script src="/static/assets/js/script.js"></script>
+
+
+</html>
