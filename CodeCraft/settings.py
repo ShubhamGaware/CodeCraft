@@ -88,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', 
         'NAME':'codecraftdatabase',
         'USER': 'superuser',  
-        'PASSWORD': 'pass@123', 
+        'PASSWORD': 'Shubham@1998', 
         'HOST': 'demoserver0001.mysql.database.azure.com',
         'PORT': '3306', 
         'OPTIONS': {  
