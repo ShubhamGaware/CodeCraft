@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> contact_us | codecraft.com</title>
+
+    <link rel="shortcut icon" href="/static/assets/images/fav.jpg">
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" href="/static/assets/plugins/slider/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/assets/plugins/slider/css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- ################# Header Starts Here#######################--->
+    {%  include "header.html" %}
+
+
+
+    <!--  ************************* Page Title Starts Here ************************** -->
+    <div class="page-nav no-margin row">
+        <div class="container">
+            <div class="row">
+                <h2 class="text-center">Contact Us</h2>
+                <ul>
+                    <li> <a href="/"><i class="fas fa-home"></i> Home</a></li>
+                    <li><i class="fas fa-angle-double-right"></i> Contact Us</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ######## Page  Title End ####### -->
+
+     <div style="margin-top:0px;" class="row no-margin">
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3029954536123!2d73.8423092!3d18.515205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2be4ceaaaaaab%3A0x4f424a5c1800628f!2sTechRel%20Technologies%20Pvt%20Ltd.!5e0!3m2!1sen!2sin!4v1685186218782!5m2!1sen!2sin" class="border rounded shadow" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      </div>
+
+      <div class="row contact-rooo no-margin">
+        <div class="container">
+           <div class="row">
+               
+          <!--contact form start-->
+          <div style="padding:20px" class="col-sm-6">
+            <h2 style="font-size:18px">Contact Form</h2>
+            {% if success_message %}
+            <div class="alert alert-success" role="alert">
+                {{ success_message }}
+            </div>
+            {% endif %}
+            <form method="post">
+                {% csrf_token %}
+                <div class="row">
+                    <div style="padding-top:10px;" class="col-sm-3"><label for="id_name">Enter Name :</label></div>
+                    <div class="col-sm-8"><input type="text" id="id_name" name="name" placeholder="Enter Name" class="form-control input-sm"></div>
+                </div>
+                <div style="margin-top:10px;" class="row">
+                    <div style="padding-top:10px;" class="col-sm-3"><label for="id_email">Email Address :</label></div>
+                    <div class="col-sm-8"><input type="email" id="id_email" name="email" placeholder="Enter Email Address" class="form-control input-sm"></div>
+                </div>
+                <div style="margin-top:10px;" class="row">
+                    <div style="padding-top:10px;" class="col-sm-3"><label for="id_phone">Mobile Number:</label></div>
+                    <div class="col-sm-8"><input type="text" id="id_phone" name="phone" placeholder="Enter Mobile Number" class="form-control input-sm"></div>
+                </div>
+                <div style="margin-top:10px;" class="row">
+                    <div style="padding-top:10px;" class="col-sm-3"><label for="id_message">Enter Message:</label></div>
+                    <div class="col-sm-8">
+                        <textarea id="id_message" rows="5" placeholder="Enter Your Message" class="form-control input-sm" name="message"></textarea>
+                    </div>
+                </div>
+                <div style="margin-top:10px;" class="row">
+                    <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
+                    <div class="col-sm-8">
+                        <button type="submit" class="btn btn-success btn-sm">Send Message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+            <!--End contact form-->
+             <div class="col-sm-6">
+                    
+                  <div style="margin:50px" class="serv"> 
+                
+               
+             
+                              
+              
+          <h2 style="margin-top:10px;">Address</h2>
+
+    TechRel Institute <br>
+    Garware Bridge,<br>
+    near Chatrapati Sambhaji Maharaj statue,<br>
+    Pulachi Wadi, Deccan Gymkhana,Pune<br>
+    Phone: 820 8416 137 / 800 7243 000<br>
+    Email:hr@techrel.com<br>
+    Website:www.codecraft.com<br>
+
+ 
+       
+            
+                
+                
+              
+           </div>    
+                
+             
+         </div>
+
+            </div>
+        </div>
+        
+      </div>
+
+
+
+
+
+      {%  include "footer.html" %}
+    <div class="copy">
+        <div class="container">
+            <a href="https://onezeroeight.in/">2024 &copy; All Rights Reserved | Designed and Developed by OneZeroEight Ltd.</a>
+
+            <span>
+                <a><i class="fab fa-github"></i></a>
+                <a><i class="fab fa-google-plus-g"></i></a>
+                <a><i class="fab fa-pinterest-p"></i></a>
+                <a><i class="fab fa-twitter"></i></a>
+                <a><i class="fab fa-facebook-f"></i></a>
+            </span>
+        </div>
+
+    </div>
+
+</body>
+
+<script src="/static/assets/js/jquery-3.2.1.min.js"></script>
+<script src="/static/assets/js/popper.min.js"></script>
+<script src="/static/assets/js/bootstrap.min.js"></script>
+<script src="/static/assets/plugins/slider/js/owl.carousel.min.js"></script>
+<script src="/static/assets/js/script.js"></script>
+
+
+</html>
